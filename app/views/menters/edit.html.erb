@@ -1,0 +1,14 @@
+<div class="contents row">
+  <div class="container">
+    <h3>編集する</h3>
+    <%= form_with(model: @menter, local: true) do |form| %>
+      <%= form.text_field :name, placeholder: "メンター名" %>
+      <%= form.text_field :job, placeholder: "職業" %>
+      <%= form.text_area :respect, placeholder: "尊敬するところ" %>
+      <%= form.text_area :norespect, placeholder: "尊敬できないところ" %>
+      <%= form.text_area :influence, placeholder: "影響を受けた事" %>
+      <%= form.text_area :get, placeholder: "得られた事（見込みを含む）" %>
+      <%= form.submit "登録する" %>
+    <% end %>
+  </div>
+</div>
